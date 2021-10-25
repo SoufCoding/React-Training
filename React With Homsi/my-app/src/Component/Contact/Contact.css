@@ -1,0 +1,70 @@
+.c {
+  height: 100vh;
+  position: relative;
+}
+.c-bg {
+  float: left;
+  width: 20px;
+  height: 100vh;
+  background-color: #59b256;
+}
+.c-wraper {
+  padding: 50px;
+  display: flex;
+}
+.c-left {
+  flex: 1;
+}
+.c-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.c-title {
+  font-size: 60px;
+  width: 80%;
+}
+.c-info {
+}
+.c-info-item {
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  width: 70%;
+}
+.c-icon {
+  width: 30px;
+  margin-right: 20px;
+}
+.c-desc {
+  font-weight: 100;
+}
+
+form {
+  margin-top: 30px;
+}
+input {
+  width: 51%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  margin: 20px 0px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+textarea {
+  width: 100%;
+  margin: 20px 0px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+button{
+    border: none;
+    padding: 15px;
+    background-color: #59b256;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}

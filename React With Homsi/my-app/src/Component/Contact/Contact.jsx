@@ -2,13 +2,22 @@ import './Contact.css'
 import Phone from '../../img/phone.png'
 import Email from '../../img/email.png'
 import Address from '../../img/address.png'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const formRef = useRef()
+    const [done, setDone] = useState(false)
 
     const handleSubmit =(e)=>{
-        e.preventDefault()
+        e.preventDefault();
+        emailjs.sendForm('gmailsoufkerr', 'template_v20xjr5', formRef.current, 'user_XOQ36ozdXZJsDIiq8h3mu')
+        .then((result) => {
+            console.log(result.text);
+            setDone(true)
+        }, (error) => {
+            console.log(error.text);
+        });
     }
 
 
@@ -34,10 +43,11 @@ const Contact = () => {
                     <p className="c-desc"><b>Lorem, ipsum dolor sit amet</b> consectetur adipisicing elit. Quidem a nemo libero porro voluptas saepe, cupiditate corporis, odit impedit expedita quas. Voluptas.</p>
                     <form ref= {formRef} onSubmit={handleSubmit}>
                         <input type="text" placeholder="Name" name="User_name" />
-                        <input type="text" placeholder="Subject" name="User_subject" />
-                        <input type="text" placeholder="Email" name="User_email" />
+                        <input type="text" placeholder="Subject" name="User_Subject" />
+                        <input type="text" placeholder="Email" name="User_Email" />
                         <textarea rows="5" placeholder="Message" name="message"></textarea>
                         <button>Submit</button>
+                        {done && "Thank You..."}
                     </form>
                 </div>
             </div>

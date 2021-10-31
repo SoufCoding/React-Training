@@ -2,6 +2,7 @@ import About from "./Component/About/About"
 import Contact from "./Component/Contact/Contact"
 import Intro from "./Component/intro/Intro"
 import ProductList from "./Component/ProductList/ProductList"
+import Toggle from "./Component/Toggle/Toggle"
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
             <About/>
             <ProductList/>
             <Contact/>
+            <Toggle/>
         </div>
     )
 }

@@ -51,8 +51,11 @@ input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.274);
   margin: 20px 0px;
-  padding-left: 10px;
+  padding: 10px 10px;
   font-size: 14px;
+}
+input:focus {
+  outline: none;
 }
 textarea {
   width: 100%;
@@ -60,11 +63,11 @@ textarea {
   padding-left: 10px;
   font-size: 14px;
 }
-button{
-    border: none;
-    padding: 15px;
-    background-color: #59b256;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
+button {
+  border: none;
+  padding: 15px;
+  background-color: #59b256;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }

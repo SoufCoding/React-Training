@@ -81,3 +81,34 @@
   width: 100%;
   position: absolute;
 }
+
+
+@media screen and (max-width: 480px) {
+  .i{
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  .i-left-wraper{
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .i-desc{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,12 +2,15 @@ import './Contact.css'
 import Phone from '../../img/phone.png'
 import Email from '../../img/email.png'
 import Address from '../../img/address.png'
-import { useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import emailjs from 'emailjs-com';
+import { ThemeContext } from '../../Context'
 
 const Contact = () => {
     const formRef = useRef()
     const [done, setDone] = useState(false)
+    const Theme = useContext(ThemeContext);
+    const darkMode = Theme.state.darkMode;
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -42,10 +45,10 @@ const Contact = () => {
                 <div className="c-right">
                     <p className="c-desc"><b>Lorem, ipsum dolor sit amet</b> consectetur adipisicing elit. Quidem a nemo libero porro voluptas saepe, cupiditate corporis, odit impedit expedita quas. Voluptas.</p>
                     <form ref= {formRef} onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Name" name="User_name" />
-                        <input type="text" placeholder="Subject" name="User_Subject" />
-                        <input type="text" placeholder="Email" name="User_Email" />
-                        <textarea rows="5" placeholder="Message" name="message"></textarea>
+                        <input style= {{backgroundColor: darkMode? "#333" : "white", color: darkMode && "white" }} type="text" placeholder="Name" name="User_name" />
+                        <input style= {{backgroundColor: darkMode? "#333" : "white", color: darkMode && "white" }} type="text" placeholder="Subject" name="User_Subject" />
+                        <input style= {{backgroundColor: darkMode? "#333" : "white", color: darkMode && "white" }} type="text" placeholder="Email" name="User_Email" />
+                        <textarea style= {{backgroundColor: darkMode? "#333" : "white", color: darkMode && "white", border: darkMode && "none" }} rows="5" placeholder="Message" name="message"></textarea>
                         <button>Submit</button>
                         {done && "Thank You..."}
                     </form>

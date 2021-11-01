@@ -23,4 +23,5 @@
     background-color: #999;
     position: absolute;
     cursor: pointer;
+    transition: ease 0.25s;
 }

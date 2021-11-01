@@ -63,6 +63,9 @@ textarea {
   padding-left: 10px;
   font-size: 14px;
 }
+textarea:focus {
+  outline: none;
+}
 button {
   border: none;
   padding: 15px;
@@ -71,3 +74,46 @@ button {
   font-weight: 700;
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  .c-wraper{
+    flex-direction: column;
+    padding: 0px 50px;
+  }
+  .c-title{
+    font-size: 30px;
+  }
+  .c-info-item{
+    margin: 20px 0px;
+    width: 100%;
+  }
+  .c-desc{
+    display: none;
+  }
+  form{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  input{
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
